@@ -28,8 +28,9 @@
                 switch (integerDigits) {
                     case 1:
                         return (Math.floor(10 * result) / 10).toFixed(1) + ranges[i].suffix;
-                    case 2:
-                    case 3:
+                    case 5:
+                    case 6:
+                        return (Math.round(10 * result) / 10) + ranges[i].suffix;
                     default:
                         return Math.round(result) + ranges[i].suffix;
                 }
